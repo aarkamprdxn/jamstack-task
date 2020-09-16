@@ -1,0 +1,14 @@
+
+<ul>
+    {% for post in postlist %}
+    <li>
+        <div>
+        <img src="{{ post.data.featuredImage | url }}" alt={{ "title" }} ></img>
+        </div>
+        <div class="content">  
+        <a href="{{ post.url | url }}"> {{ post.data.title }} </a>
+        <p>{{ post.data.description }}</p>
+        </div>  
+    </li>
+    {% endfor %}
+</ul>
